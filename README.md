@@ -1,21 +1,26 @@
 # claude-setting
 Шеф, ин бастаи ҷудо фақат барои **Claude Code** аст. Claude Desktop/Cowork ва ChatGPT personalization-ро тағйир намедиҳад.
 
-## Насб
-Ба Claude Code ссылкаи репоро дода бигӯ:
-> Ин репоро clone кун, CLAUDE.md ва README-ро хон. `python setup.py install` ва `python setup.py doctor`-ро иҷро кун. Баъд дар Claude Code бор шудани instructions ва skills-ро санҷ. Файлҳои мавҷуда ва authentication-ро нигоҳ дор.
+## Насб (автоматӣ, як команда)
+Дар PowerShell:
 
+```powershell
+irm https://raw.githubusercontent.com/safarovmurod/claude-setting/main/bootstrap.ps1 | iex
+```
+`bootstrap.ps1` худаш ZIP-и репоро ба папкаи муваққатӣ мекашад, `setup.py install`-ро иҷро мекунад, баъд `doctor`-ро нишон медиҳад ва папкаи муваққатиро тоза мекунад. Clone лозим нест. Ин роҳ репои **публик** мехоҳад; агар репо private бошад, бе token кор намекунад — ҳамон вақт роҳи дуюмро гир.
+
+## Насб (clone, варианти дуюм)
 ```powershell
 git clone https://github.com/safarovmurod/claude-setting.git
 cd claude-setting
 .\Install.ps1
 .\Install.ps1 doctor
 ```
-Python 3.11+ ва Claude Code-и расмӣ лозиманд. Ин installer худи барнома ё login-ро насб намекунад. [Насби расмӣ](https://code.claude.com/docs/en/setup). Ҳисоби GitHub бояд ба репои private дастрасӣ дошта бошад.
+Python 3.11+ ва Claude Code-и расмӣ лозиманд. Ин installer худи барнома ё login-ро насб намекунад. [Насби расмӣ](https://code.claude.com/docs/en/setup).
 
 ## Ҷойҳо
 - `~/.claude/CLAUDE.md`: import-и дастурҳои шахсӣ; матни пешина нигоҳ дошта мешавад.
-- `~/.claude/claude-setting/instructions.md`: гапзанӣ ва coding preferences.
+- `~/.claude/claude-setting/instructions.md`: гапзанӣ ва coding preferences — муроҷиат «ака Мансур», mentor-и frontend, проекти нав React + JSX + Vite (проекти TypeScript-дошта бо TSX), формати хатогӣ ва тартиби дарс. Дизайн: аввал `package.json` санҷида мешавад — Tailwind ҳаст → HTML + Tailwind, MUI ҳаст → MUI, ҳеҷ чиз нест → пурсида мешавад ва баъди интихоб худаш насб мекунад.
 - `~/.claude/skills`: `/frontend-work`, `/project-check`, `/setup-check`.
 - `~/.claude/claude-setting/receipt.json` ва `backups`: ownership ва баргардондан.
 
