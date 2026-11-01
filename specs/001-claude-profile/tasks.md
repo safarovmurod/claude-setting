@@ -3,5 +3,5 @@
 - [x] Initialize Spec Kit in this project.
 - [x] Curate Claude-only instructions and three explicit skills.
 - [x] Build installer and manifest.
-- [ ] Verify lifecycle tests and private repository.
+- [x] Verify six lifecycle tests and private repository.
 - [ ] Verify live Claude Code discovery after official installation/sign-in.

@@ -29,4 +29,4 @@ AUTORUN-и Codex дар Claude кор намекунад. Дар ин баста
 ## Санҷиш
 `python -m unittest discover -s tests -v`. Doctor танҳо файл ва мавҷудияти CLI-ро месанҷад; кори authenticated ё discovery-и воқеиро исбот намекунад. Ҳолати насби ин ПК: Claude CLI дар PATH ёфт нашуд; профил ба ҳисоби шахсӣ татбиқ нашудааст. Санҷишҳои lifecycle дар home-и муваққатӣ иҷро мешаванд.
 
-Манбаъҳо: [CLAUDE.md](https://code.claude.com/docs/en/memory), [skills](https://code.claude.com/docs/en/skills), [settings](https://code.claude.com/docs/en/settings). Spec Kit бо pin-и 7370e592f3cd9c06e5b698983957e227c75b30e2 оғоз шуд; .agents/.specify танҳо tooling-и таҳияи ин репо ҳастанд, installer онҳоро насб намекунад.
+Манбаъҳо: [CLAUDE.md](https://code.claude.com/docs/en/memory), [skills](https://code.claude.com/docs/en/skills), [settings](https://code.claude.com/docs/en/settings). Spec Kit бо pin-и 7370e592f3cd9c06e5b698983957e227c75b30e2 оғоз шуд; .agents-и Codex танҳо дар папкаи таҳия мемонад ва ба репо намеравад; .specify ҳуҷҷатгузории таҳия аст, installer онро насб намекунад.
