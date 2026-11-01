@@ -18,6 +18,18 @@ cd claude-setting
 ```
 Python 3.11+ ва Claude Code-и расмӣ лозиманд. Ин installer худи барнома ё login-ро насб намекунад. [Насби расмӣ](https://code.claude.com/docs/en/setup).
 
+## Қоида дар кадом ҷо кор мекунад
+
+| Ҷой | Куҷо кор мекунад |
+|---|---|
+| **Personalization** дар claude.ai → Settings | **ҳама ҷо**: облако, локалӣ, desktop, мобил, ҳар репо |
+| `~/.claude/CLAUDE.md` (аз `bootstrap.ps1`) | танҳо дар Claude Code-и ҳамон ПК, вале дар ҳама проектҳо |
+| `CLAUDE.md`-и дохили репо | танҳо дар ҳамон як репо |
+
+Сессияи облакӣ (claude.ai/code) `~/.claude`-и ПК-ро **намебинад** — он дар контейнери дигар кор мекунад. Пас барои он ки қоидаҳо дар облако ва дар ҳар репо кор кунанд, **Personalization ҳатмист**.
+
+Матни тайёр барои Personalization дар [`personalization.md`](personalization.md) аст: copy кун, ба claude.ai гузор, баъд **чати нав** кушо (чати кӯҳна матни кӯҳнаро нигоҳ медорад).
+
 ## Ҷойҳо
 - `~/.claude/CLAUDE.md`: import-и дастурҳои шахсӣ; матни пешина нигоҳ дошта мешавад.
 - `~/.claude/claude-setting/instructions.md`: гапзанӣ ва coding preferences — муроҷиат «ака Мансур», mentor-и frontend, проекти нав React + JSX + Vite (проекти TypeScript-дошта бо TSX), формати хатогӣ ва тартиби дарс. Дизайн: аввал `package.json` санҷида мешавад — Tailwind ҳаст → HTML + Tailwind, MUI ҳаст → MUI, ҳеҷ чиз нест → пурсида мешавад ва баъди интихоб худаш насб мекунад.
