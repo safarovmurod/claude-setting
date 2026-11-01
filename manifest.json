@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "product": "claude-setting",
+  "files": {
+    ".claude/CLAUDE.md": "d86fe27e13f193c2593a69d3afead744cdbaca0597ecff1d6a6f1c3d064a1ff8",
+    ".claude/claude-setting/instructions.md": "74a7a6813517daaf09433984e8ce41eb968cb7868d48022fce860cb9b7c402f6",
+    ".claude/skills/frontend-work/SKILL.md": "a11f1ebea8584aecfc9c9dab6ffc9a8772ca3f32f6ca19e5964894f557014ded",
+    ".claude/skills/project-check/SKILL.md": "718329f575dce78a8d9d234086580a39ff7d7aa4ed332f783a8ad1972f499b9f",
+    ".claude/skills/setup-check/SKILL.md": "eaf6555dc28f1d837a003fa31d7c8f4dbf445f619ec744174ef0a1d70ba5829d"
+  },
+  "excluded": [
+    "credentials",
+    "sessions",
+    "databases",
+    "Codex settings and watcher",
+    "automatic rate-limit recovery",
+    "account personalization",
+    "plugins"
+  ],
+  "source": "Curated user preferences; no existing Claude Code settings.json was found"
+}
