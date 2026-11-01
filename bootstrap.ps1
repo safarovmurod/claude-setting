@@ -9,6 +9,8 @@ param(
 )
 $ErrorActionPreference='Stop'
 $ProgressPreference='SilentlyContinue'
+try { [Console]::OutputEncoding=[Text.Encoding]::UTF8 } catch {}
+try { [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12 } catch {}
 
 $python=$null
 foreach ($name in @('python','python3','py')) {
@@ -20,9 +22,10 @@ if (-not $python) {
   exit 1
 }
 
-$version=(& $python -c 'import sys;print("%d.%d"%sys.version_info[:2])')
-if ([version]$version -lt [version]'3.11') {
-  Write-Host "Python $version кам аст, 3.11+ лозим: https://www.python.org/downloads/"
+# Бе кавычкаи дохилӣ: PowerShell 5.1 кавычкаро ҳангоми фиристодан ба exe мепартояд.
+& $python -c 'import sys;sys.exit(sys.version_info<(3,11))'
+if ($LASTEXITCODE -ne 0) {
+  Write-Host 'Python 3.11+ лозим аст: https://www.python.org/downloads/'
   exit 1
 }
 
