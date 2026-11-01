@@ -40,6 +40,8 @@ def operate(action,home,source=ROOT):
     home=home.resolve();state=home/'.claude/claude-setting';receipt=state/'receipt.json'
     plain(receipt);record=load(receipt)
     if record and record.get('product')!=PRODUCT:raise ValueError('FOREIGN_RECEIPT')
+    allowed=load(source/'manifest.json')['files']
+    if any(rel not in allowed for rel in record.get('files',{})):raise ValueError('UNOWNED_RECEIPT_PATH')
     if action=='doctor':
         issues=[rel for rel,item in record.get('files',{}).items() if not (home/rel).is_file() or sha((home/rel).read_bytes())!=item['sha256']]
         return {'installed':bool(record),'files_ok':bool(record) and not issues,'issues':issues,'claude_cli_found':shutil.which('claude') is not None,'runtime_discovery_verified':False}

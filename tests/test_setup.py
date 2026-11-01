@@ -41,5 +41,11 @@ class SetupTests(unittest.TestCase):
         for rel,digest in manifest['files'].items():
             self.assertTrue(rel.startswith('.claude/'));self.assertEqual(setup.sha((ROOT/'profile'/rel).read_bytes()),digest)
             self.assertNotIn('auth',rel);self.assertTrue(rel.endswith('.md'))
+    def test_receipt_cannot_restore_unowned_paths(self):
+        setup.run('install',self.home)
+        receipt=self.home/'.claude/claude-setting/receipt.json';record=setup.load(receipt)
+        record['files']['../outside']={'sha256':'fake','existed':False}
+        receipt.write_text(json.dumps(record))
+        with self.assertRaisesRegex(ValueError,'UNOWNED_RECEIPT_PATH'):setup.run('uninstall',self.home)
 
 if __name__=='__main__':unittest.main()
