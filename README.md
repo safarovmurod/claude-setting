@@ -32,7 +32,7 @@ Python 3.11+ ва Claude Code-и расмӣ лозиманд. Ин installer х�
 
 ## Ҷойҳо
 - `~/.claude/CLAUDE.md`: import-и дастурҳои шахсӣ; матни пешина нигоҳ дошта мешавад.
-- `~/.claude/claude-setting/instructions.md`: гапзанӣ ва coding preferences — муроҷиат «ака Мансур», mentor-и frontend, проекти нав React + JSX + Vite (проекти TypeScript-дошта бо TSX), формати хатогӣ ва тартиби дарс. Дизайн: аввал `package.json` санҷида мешавад — Tailwind ҳаст → HTML + Tailwind, MUI ҳаст → MUI, ҳеҷ чиз нест → пурсида мешавад ва баъди интихоб худаш насб мекунад.
+- `~/.claude/claude-setting/instructions.md`: гапзанӣ ва coding preferences — муроҷиат «шеф», mentor-и frontend, проекти нав React + TypeScript (TSX) + Vite (проекти JavaScript бо ҳамон JSX), формати хатогӣ ва тартиби дарс. Дизайн: аввал `package.json` санҷида мешавад — Tailwind ҳаст → HTML + Tailwind, MUI ҳаст → MUI, ҳеҷ чиз нест → пурсида мешавад ва баъди интихоб худаш насб мекунад.
 - `~/.claude/skills`: `/frontend-work`, `/project-check`, `/setup-check`.
 - `~/.claude/claude-setting/receipt.json` ва `backups`: ownership ва баргардондан.
 
@@ -44,6 +44,6 @@ Codex config.toml, AGENTS runtime paths, Codex queue, watcher, scheduled task, 3
 AUTORUN-и Codex дар Claude кор намекунад. Дар ин баста командаи сохтаи /autorun ё ваъдаи идомаи баъди quota нест. Барои сессия ва лимит аз командаҳои версияи ҷории Claude истифода бар. Мобил/Remote ва барқароршавии воқеии лимит дар ин баста санҷида нашудаанд.
 
 ## Санҷиш
-`python -m unittest discover -s tests -v`. Doctor танҳо файл ва мавҷудияти CLI-ро месанҷад; кори authenticated ё discovery-и воқеиро исбот намекунад. Ҳолати насби ин ПК: Claude CLI дар PATH ёфт нашуд; профил ба ҳисоби шахсӣ татбиқ нашудааст. Санҷишҳои lifecycle дар home-и муваққатӣ иҷро мешаванд.
+`python -m unittest discover -s tests -v`. Doctor танҳо файл ва мавҷудияти CLI-ро месанҷад; кори authenticated ё discovery-и воқеиро исбот намекунад. Ҳолати насби ин ПК (2026-11-03): Claude CLI 2.1.316 дар PATH ёфт шуд, профил насб шуд, `doctor` → `files_ok: true`. Personalization-и claude.ai дастӣ монд — онро installer намегузорад. Санҷишҳои lifecycle дар home-и муваққатӣ иҷро мешаванд.
 
 Манбаъҳо: [CLAUDE.md](https://code.claude.com/docs/en/memory), [skills](https://code.claude.com/docs/en/skills), [settings](https://code.claude.com/docs/en/settings). Spec Kit бо pin-и 7370e592f3cd9c06e5b698983957e227c75b30e2 оғоз шуд; .agents-и Codex танҳо дар папкаи таҳия мемонад ва ба репо намеравад; .specify ҳуҷҷатгузории таҳия аст, installer онро насб намекунад.
