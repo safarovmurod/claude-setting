@@ -7,15 +7,17 @@
 ```powershell
 irm https://raw.githubusercontent.com/safarovmurod/claude-setting/main/bootstrap.ps1 | iex
 ```
-`bootstrap.ps1` худаш ZIP-и репоро ба папкаи муваққатӣ мекашад, `setup.py install`-ро иҷро мекунад, баъд `doctor`-ро нишон медиҳад ва папкаи муваққатиро тоза мекунад. Clone лозим нест. Ин роҳ репои **публик** мехоҳад; агар репо private бошад, бе token кор намекунад — ҳамон вақт роҳи дуюмро гир.
+`bootstrap.ps1` худаш ZIP-и репоро ба папкаи муваққатӣ мекашад, боз мекунад, `setup.py install`-ро иҷро мекунад, баъд `doctor`-ро нишон медиҳад ва папкаи муваққатиро тоза мекунад. Clone лозим нест. Ин роҳ репои **публик** мехоҳад; ин репо публик аст ва санҷида шуд. Матнҳои дохили `bootstrap.ps1` танҳо лотинӣ ҳастанд: UTF-8 BOM роҳи `irm | iex`-ро мешиканад, вале бе BOM Windows PowerShell 5.1 матни кириллиро вайрон мехонад.
 
 ## Насб (clone, варианти дуюм)
 ```powershell
 git clone https://github.com/safarovmurod/claude-setting.git
-cd claude-setting
-.\Install.ps1
-.\Install.ps1 doctor
+Set-Location claude-setting
+.\bootstrap.ps1
+.\bootstrap.ps1 -Action doctor
 ```
+Дар clone `bootstrap.ps1` чизе download намекунад — ҳамон папкаи назди худашро насб мекунад ва баъд `doctor` мегӯяд. `.\Install.ps1` ва `.\Install.ps1 doctor` ҳам кор мекунанд.
+
 Python 3.11+ ва Claude Code-и расмӣ лозиманд. Ин installer худи барнома ё login-ро насб намекунад. [Насби расмӣ](https://code.claude.com/docs/en/setup).
 
 ## Қоида дар кадом ҷо кор мекунад
