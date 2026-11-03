@@ -3,9 +3,9 @@
   "product": "claude-setting",
   "files": {
     ".claude/CLAUDE.md": "d86fe27e13f193c2593a69d3afead744cdbaca0597ecff1d6a6f1c3d064a1ff8",
-    ".claude/claude-setting/instructions.md": "4568fea44a9554701c3a4a432caef7f34f05dbc0c0ea0cc5c4e883c1bae972b8",
-    ".claude/skills/frontend-work/SKILL.md": "63ba5cac52062a9d3a1e1ae3669eaa7680f282bab1a02aa58b5b086ae278ca0f",
-    ".claude/skills/project-check/SKILL.md": "86773b2c39e0015206135b93542971b93f43135d4e0dbadf6ccb38ca24f69b67",
+    ".claude/claude-setting/instructions.md": "b40733806a3a8f88187b04db7c84980b8a09a2290c3dd8eb49dd151b70034cf8",
+    ".claude/skills/frontend-work/SKILL.md": "dbe5935b16ec8e213761bdd6029614694f82f4bcae896493ff032a8f1d2063b7",
+    ".claude/skills/project-check/SKILL.md": "cde733e69b0b2881bdaa234fadac0a40c6503b0f1a9ffe39dc0bf876330b63ef",
     ".claude/skills/setup-check/SKILL.md": "c48fa1410b28ef6eba276787345abaefea5932efe661b769fb3d555641c4f62e"
   },
   "excluded": [
